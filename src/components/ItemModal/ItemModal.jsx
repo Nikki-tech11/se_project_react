@@ -13,11 +13,10 @@ function ItemModal({ activeModal, card, closeForm }) {
           className="modal__close-button"
           type="button"
         ></button>
-        <img src={card.link} alt="Close" className="modal__close-icon" />
         <img
           src={card?.link || "default-image.jpg"}
           alt={card?.name || "Default Alt Text"}
-          className="modal__close-icon"
+          className="modal__picture"
         />
         <div className="modal__footer">
           <h2 className="modal__caption">{card.name}</h2>
@@ -29,3 +28,7 @@ function ItemModal({ activeModal, card, closeForm }) {
 }
 
 export default ItemModal;
+
+// modal__close-button: Styles the close button itself (e.g., size, position).
+// modal__close-icon: Styles the image/icon inside the close button.
+// modal__picture: Styles the main image displayed in the modal.

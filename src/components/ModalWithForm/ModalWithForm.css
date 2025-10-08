@@ -31,27 +31,15 @@
   margin-bottom: 24px;
 }
 
-.modal__close-icon {
-  position: absolute;
-  top: -135px;
-  right: 0px;
-  border: none;
-  outline: none;
-  background: transparent;
-  background-repeat: no-repeat;
-  border-radius: 20px;
-  width: 24px;
-}
-
-.modal__close-button {
+.modal__close-btn {
   position: absolute;
   top: 16px;
   right: 16px;
   width: 24px;
   height: 24px;
-  background-size: contain;
   border: none;
   cursor: pointer;
+  background: url("../../assets/modalclosebutton.svg") center no-repeat;
 }
 
 .modal__content {
@@ -59,10 +47,11 @@
   position: relative;
   padding: 28px 28px 36px;
   max-width: 496px;
-  height: 436px;
+  min-height: 436px;
   box-sizing: border-box;
   width: 100%;
   border-radius: 20px;
+  /* background: url("../../assets/modalclosebutton.svg") no-repeat center; */
 }
 
 .modal__form {
@@ -107,9 +96,14 @@
   background-color: #fff;
   background: none;
   margin-right: 3px;
+  color: #00000080;
 }
 
-.modal__label.modal__label_type_radio {
+.modal__radio-input:checked ~ span {
+  color: #000;
+}
+
+.modal__label_type_radio span {
   /* styles the text next to radio buttons */
   font-weight: 700;
   font-style: Bold;
@@ -118,15 +112,6 @@
   letter-spacing: 0%;
   color: #00000080;
   background: none;
-}
-
-.modal__label.modal__label_type_radio input:checked {
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0%;
-  color: #000000;
 }
 
 .modal__label {

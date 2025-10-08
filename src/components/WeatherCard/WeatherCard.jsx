@@ -9,7 +9,7 @@ function WeatherCard({ weatherData }) {
 
   const filteredOptions = weatherOptions?.filter((option) => {
     return (
-      option.day === weatherData?.isDay &&
+      option.day === (weatherData?.isDay ? "true" : "false") &&
       option.condition === weatherData?.condition
     );
   });

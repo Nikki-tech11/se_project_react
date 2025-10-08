@@ -3,18 +3,15 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  font-style: Medium;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0%;
   vertical-align: bottom;
   margin-bottom: 24px;
-}
-
-.footer__left {
-  margin-left: 40px;
-}
-
-.footer__right {
-  margin-right: 24px;
+  max-width: 1360px;
+  padding-top: 171px;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 24px;
+  color: black;
 }

@@ -2,6 +2,7 @@ import "./ItemCard.css";
 import React from "react";
 
 function ItemCard({ item, cardClick }) {
+  console.log("Image URL:", item.link);
   return (
     <li className="card">
       <h2 className="card__name">{item.name}</h2>

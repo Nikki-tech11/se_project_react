@@ -22,7 +22,6 @@ export const processWeatherData = (data) => {
 };
 
 const isDay = ({ sunrise, sunset }, now) => {
-  console.log("Sunrise:", sunrise, "Sunset:", sunset, "Now:", now);
   return sunrise * 1000 < now && now < sunset * 1000;
 };
 

@@ -63,6 +63,7 @@ function App() {
             Name{" "}
           </label>
           <input
+            required
             type="text"
             id="name"
             className="modal__input"
@@ -75,7 +76,7 @@ function App() {
             Image{" "}
           </label>
           <input
-            type="text"
+            type="url"
             id="imageUrl"
             className="modal__input"
             placeholder="Image URL"
@@ -85,30 +86,33 @@ function App() {
           <legend className="modal__legend">Select the weather type</legend>
           <label className="modal__label modal__label_type_radio">
             <input
+              required
               type="radio"
               id="hot"
               className="modal__radio-input"
               name="weather"
             />
-            Hot
+            <span>Hot</span>
           </label>
           <label className="modal__label modal__label_type_radio">
             <input
+              required
               type="radio"
               id="warm"
               className="modal__radio-input"
               name="weather"
             />
-            Warm
+            <span>Warm</span>
           </label>
           <label className="modal__label modal__label_type_radio">
             <input
+              required
               type="radio"
               id="cold"
               className="modal__radio-input"
               name="weather"
             />
-            Cold
+            <span>Cold</span>
           </label>
         </fieldset>
       </ModalWithForm>
