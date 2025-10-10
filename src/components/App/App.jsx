@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { defaultClothingItems } from "../../utils/constants";
 import "./App.css";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -10,6 +10,15 @@ import { coordinates, APIkey } from "../../utils/constants";
 import Footer from "../Footer/Footer";
 
 function App() {
+  const [clothingItems, setClothingItems] = useState(
+    defaultClothingItems || []
+  ); // Initialize state
+
+  // Function to add a new clothing item
+  const addClothingItem = (newItem) => {
+    setClothingItems((prevItems) => [...prevItems, newItem]); // Add the new item to the list
+  };
+
   const [weatherData, setWeatherData] = useState({
     type: "",
     temp: { F: 999, C: 999 },
@@ -50,9 +59,15 @@ function App() {
           addClothesButtonClick={addClothesButtonClick}
           weatherData={weatherData}
         />
-        <Main weatherData={weatherData} cardClick={cardClick} />
+        <Main
+          weatherData={weatherData}
+          cardClick={cardClick}
+          clothingItems={clothingItems}
+        />
       </div>
       <ModalWithForm
+        isOpen={activeModal === "addGarment"}
+        name="addGarment"
         buttonText="Add Garment"
         title="New Garment"
         activeModal={activeModal}
@@ -91,6 +106,7 @@ function App() {
               id="hot"
               className="modal__radio-input"
               name="weather"
+              value="hot"
             />
             <span>Hot</span>
           </label>
@@ -101,6 +117,7 @@ function App() {
               id="warm"
               className="modal__radio-input"
               name="weather"
+              value="warm"
             />
             <span>Warm</span>
           </label>
@@ -111,6 +128,7 @@ function App() {
               id="cold"
               className="modal__radio-input"
               name="weather"
+              value="cold"
             />
             <span>Cold</span>
           </label>
