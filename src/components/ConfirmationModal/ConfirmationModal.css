@@ -1,0 +1,86 @@
+.modal__confirmation {
+  position: fixed;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  top: 18%;
+  left: 31.5%;
+  border-radius: 20px;
+  border-width: 1px;
+}
+
+.modal__confirmation-content {
+  width: 665px;
+  height: 280px;
+  box-sizing: border-box;
+}
+
+.modal__confirmation-title {
+  font-family: Cabinet Grotesk, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 0;
+}
+
+.modal__confirmation-description {
+  font-family: Cabinet Grotesk, sans-serif;
+  font-weight: 700; /* Use a lighter weight for the description */
+  font-size: 20px; /* Slightly smaller font size */
+  line-height: 28px; /* Adjust the line height */
+  text-align: center; /* Center the text */
+  color: #000000; /* Use a lighter color for the description */
+  margin-bottom: 30px; /* Add spacing below the description */
+  margin-top: 0;
+}
+
+.modal__confirm-button {
+  font-family: Cabinet Grotesk, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ff4d00;
+  background-color: #ffffff;
+  border: none;
+}
+
+.modal__cancel-button {
+  font-family: Cabinet Grotesk, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.modal_open {
+  display: flex; /* Make the modal visible */
+}
+
+.modal__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.modal__confirmation-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #0000004d;
+}

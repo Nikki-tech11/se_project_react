@@ -23,13 +23,13 @@
 }
 
 .header__add-clothes-button {
-  margin: 0 20px 0 auto;
   font-family: cabinet grotesk, sans-serif;
   font-weight: 700;
   font-style: bold;
   font-size: 20px;
   line-height: 24px;
   border: none;
+  padding: 0;
 }
 
 .header__user-container {
@@ -45,4 +45,16 @@
   font-style: bold;
   font-size: 20px;
   line-height: 1;
+}
+
+.header__actions {
+  display: flex; /* Align toggle switch and button horizontally */
+  align-items: center; /* Vertically align toggle switch and button */
+  gap: 20px; /* Add spacing between the toggle switch and the button */
+  margin-left: auto; /* Push the actions to the right */
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: black;
 }

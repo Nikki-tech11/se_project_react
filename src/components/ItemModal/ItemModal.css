@@ -29,3 +29,22 @@
   background: url("../../assets/itemmodalclosebutton.svg") center no-repeat;
   background-size: contain;
 }
+
+.modal__delete-btn {
+  position: absolute;
+  bottom: 79px;
+  right: 16px;
+  padding: 8px 12px;
+  border: none;
+  color: #ff4d4f;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  opacity: 1;
+  font-family: Cabinet Grotesk;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}

@@ -1,9 +1,15 @@
+import React from "react";
 import "./ItemModal.css";
 
-function ItemModal({ activeModal, card, closeForm }) {
+function ItemModal({ activeModal, card, closeForm, openConfirmationModal }) {
+  console.log("ItemModal rendered. activeModal:", activeModal);
   if (!card) {
     return null; // Don't render the modal if card is undefined
   }
+  const handleDeleteClick = () => {
+    console.log("Delete button clicked for card:", card); // Debugging log
+    openConfirmationModal(); // Call the function passed from App.jsx
+  };
 
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
@@ -14,7 +20,7 @@ function ItemModal({ activeModal, card, closeForm }) {
           type="button"
         ></button>
         <img
-          src={card?.link || "default-image.jpg"}
+          src={card?.imageUrl || "default-image.jpg"}
           alt={card?.name || "Default Alt Text"}
           className="modal__picture"
         />
@@ -22,6 +28,13 @@ function ItemModal({ activeModal, card, closeForm }) {
           <h2 className="modal__caption">{card.name}</h2>
           <p className="modal__weather">Weather: {card.weather} </p>
         </div>
+        <button
+          onClick={handleDeleteClick}
+          className="modal__delete-btn"
+          type="button"
+        >
+          Delete item
+        </button>
       </div>
     </div>
   );
