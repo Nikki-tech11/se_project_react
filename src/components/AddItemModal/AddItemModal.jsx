@@ -30,6 +30,7 @@ const AddItemModal = ({ isOpen, closeForm, onAddItem }) => {
           Name{" "}
         </label>
         <input
+          name="name"
           required
           type="text"
           id="name"
@@ -45,6 +46,7 @@ const AddItemModal = ({ isOpen, closeForm, onAddItem }) => {
           Image{" "}
         </label>
         <input
+          name="imageUrl"
           type="url"
           id="imageUrl"
           className="modal__input"
@@ -62,7 +64,7 @@ const AddItemModal = ({ isOpen, closeForm, onAddItem }) => {
             id="hot"
             className="modal__radio-input"
             name="weather"
-            value="Hot"
+            value="hot"
             onChange={handleChange}
           />
           <span>Hot</span>
@@ -74,7 +76,7 @@ const AddItemModal = ({ isOpen, closeForm, onAddItem }) => {
             id="warm"
             className="modal__radio-input"
             name="weather"
-            value="Warm"
+            value="warm"
             onChange={handleChange}
           />
           <span>Warm</span>
@@ -86,7 +88,7 @@ const AddItemModal = ({ isOpen, closeForm, onAddItem }) => {
             id="cold"
             className="modal__radio-input"
             name="weather"
-            value="Cold"
+            value="cold"
             onChange={handleChange}
           />
           <span>Cold</span>

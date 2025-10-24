@@ -16,6 +16,7 @@ import { getItems } from "../../utils/api";
 import { addItem } from "../../utils/api";
 import ConfirmationModal from "../ConfirmationModal/ConfirmationModal";
 import { deleteItem } from "../../utils/api";
+import ClothesSection from "../ClothesSection/ClothesSection";
 
 function App() {
   const { values, handleChange, setValues } = useForm({
@@ -54,7 +55,6 @@ function App() {
   const [itemToDelete, setItemToDelete] = useState(null);
 
   const openConfirmationModal = (item) => {
-    console.log("Item to delete:", item);
     setItemToDelete(item);
     setIsConfirmationModalOpen(true);
     setActiveModal("");
@@ -122,7 +122,10 @@ function App() {
   return (
     <div className="page">
       <CurrentTemperatureUnitContext.Provider
-        value={{ CurrentTemperatureUnit, handleToggleSwitchChange }}
+        value={{
+          CurrentTemperatureUnit: CurrentTemperatureUnit,
+          handleToggleSwitchChange,
+        }}
       >
         <div className="page__content">
           <Header
@@ -144,7 +147,11 @@ function App() {
             <Route
               path="/profile"
               element={
-                <Profile clothingItems={clothingItems} cardClick={cardClick} />
+                <Profile
+                  clothingItems={clothingItems}
+                  cardClick={cardClick}
+                  onAddButtonClick={addClothesButtonClick}
+                />
               }
             />
           </Routes>
