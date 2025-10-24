@@ -11,7 +11,6 @@ import { coordinates, APIkey } from "../../utils/constants";
 import Footer from "../Footer/Footer";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
-import { useForm } from "../../hooks/useForm";
 import { Route, Routes } from "react-router-dom";
 import { getItems } from "../../utils/api";
 import { addItem } from "../../utils/api";
