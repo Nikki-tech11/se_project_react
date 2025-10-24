@@ -1,5 +1,38 @@
 # React + Vite
 
+# Weather Wardrobe App
+
+This is a React-based application that helps users decide what to wear based on the current weather. Users can add, view, and delete clothing items, and toggle between Fahrenheit and Celsius for temperature display.
+
+---
+
+## Features
+
+- Displays current weather data using the OpenWeather API.
+- Allows users to add, view, and delete clothing items.
+- Includes a toggle switch to switch between Fahrenheit and Celsius.
+- Provides a profile page to view all clothing items.
+- Confirmation modal for safe deletion of items.
+
+---
+
+## Technologies Used
+
+- **React**: Frontend framework.
+- **React Router**: For routing between pages.
+- **OpenWeather API**: For fetching weather data.
+- **CSS**: For styling the app.
+- **Vite**: For fast development and build setup.
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nikki-tech11/se_project_react.git
+   
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
